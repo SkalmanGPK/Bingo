@@ -24,9 +24,9 @@ def main():
         called_numbers = generate_numbers()
         mark_numbers(called_numbers, marked_board)
         
-        bingo = (check_rows(marked_board) or 
-                check_columns(marked_board) or 
-                check_diagonal1(marked_board) or 
+        bingo = (check_rows(marked_board) and 
+                check_columns(marked_board) and
+                check_diagonal1(marked_board) and
                 check_diagonal2(marked_board))
         
         attempts += 1
